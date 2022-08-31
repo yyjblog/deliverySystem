@@ -3,6 +3,7 @@ package com.example.delivery_platform.view;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -39,10 +40,13 @@ public class LoginController {
 
     @FXML
     void onRegisterClicked(ActionEvent event) throws IOException {
-        AnchorPane settings = FXMLLoader.load(this.getClass().getResource("RegisterWindow.fxml"));
-        Stage settingsStage = new Stage();
-        settingsStage.setTitle("注册");
-        settingsStage.setScene(new Scene(settings));
-        settingsStage.show();
+        AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("RegisterWindow.fxml"));
+
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage.setTitle("注册界面");
+        stage.setScene(scene);
+        stage.show();
+
     }
 }
