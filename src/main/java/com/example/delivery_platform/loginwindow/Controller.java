@@ -1,5 +1,6 @@
 package com.example.delivery_platform.loginwindow;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -17,13 +18,18 @@ public class Controller {
     @FXML
     private TextField verification;
     @FXML
-    private ImageView logo;
+    private Button verificationButton;
+
+
+
     @FXML
-    private Label verificationLabel;
+    void onLoginclicked(ActionEvent event) {
+
+    }
+
     @FXML
-    private ImageView verification_image;
+    void onVerificationclicked(ActionEvent event) {
 
 
-
-
+    }
 }
