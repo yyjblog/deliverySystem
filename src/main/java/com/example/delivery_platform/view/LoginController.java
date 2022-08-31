@@ -46,4 +46,3 @@ public class LoginController {
         settingsStage.show();
     }
 }
-//你好
