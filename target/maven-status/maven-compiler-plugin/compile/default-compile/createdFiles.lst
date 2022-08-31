@@ -1,5 +1,5 @@
-com\example\delivery_platform\loginwindow\loginWindow.class
+com\example\delivery_platform\registerwindow\RegisterWindow.class
 com\example\delivery_platform\HelloApplication.class
 module-info.class
 com\example\delivery_platform\HelloController.class
-com\example\delivery_platform\loginwindow\Controller.class
+com\example\delivery_platform\loginwindow\LoginWindow.class

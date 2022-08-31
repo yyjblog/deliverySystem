@@ -4,8 +4,9 @@ module com.example.delivery_platform {
 
 
     opens com.example.delivery_platform to javafx.fxml;
-    opens com.example.delivery_platform.loginwindow to javafx.fxml;
+    opens com.example.delivery_platform.view to javafx.fxml;
 
     exports com.example.delivery_platform;
-    exports com.example.delivery_platform.loginwindow;
+    exports com.example.delivery_platform.view;
+
 }
