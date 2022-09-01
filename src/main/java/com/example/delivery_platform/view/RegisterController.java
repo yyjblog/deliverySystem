@@ -34,6 +34,9 @@ public class RegisterController {
     @FXML
     private Button registerBtn;
 
+    @FXML
+    private Button verificationBtn;
+
     public void choose(){
         roleChoiceBox.getItems().addAll("scsa","caasc","caas");
     }
