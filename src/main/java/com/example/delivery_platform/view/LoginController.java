@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -41,7 +40,6 @@ public class LoginController {
     @FXML
     void onRegisterClicked(ActionEvent event) throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("RegisterWindow.fxml"));
-
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setTitle("注册界面");
