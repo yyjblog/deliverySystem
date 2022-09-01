@@ -12,7 +12,7 @@ public class LoginWindow extends Application {
         AnchorPane anchorPane= FXMLLoader.load(this.getClass().getResource("LoginWindow.fxml"));
         Scene scene=new Scene(anchorPane);
 
-        stage.setTitle("登录窗口");
+        stage.setTitle("登录窗口。");
         stage.setScene(scene);
 
         stage.show();
