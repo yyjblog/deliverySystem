@@ -40,7 +40,6 @@ public class LoginController {
     @FXML
     void onRegisterClicked(ActionEvent event) throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("RegisterWindow.fxml"));
-
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setTitle("注册界面");
