@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\javaFX实训\外卖平台\src\main\java\com\example\delivery_platform\view\BusinessPersonalWindowController.java
 D:\javaFX实训\外卖平台\src\main\java\com\example\delivery_platform\view\RegisterController.java
 D:\javaFX实训\外卖平台\src\main\java\com\example\delivery_platform\model\Business.java
@@ -12,3 +13,10 @@ D:\javaFX实训\外卖平台\src\main\java\com\example\delivery_platform\view\Bu
 D:\javaFX实训\外卖平台\src\main\java\com\example\delivery_platform\view\BusinessMainWindowController.java
 D:\javaFX实训\外卖平台\src\main\java\com\example\delivery_platform\model\Commodity.java
 D:\javaFX实训\外卖平台\src\main\java\com\example\delivery_platform\model\Rider.java
+=======
+D:\liupiao\中南大学\我的大学\大二上\Java实训\外卖平台\src\main\java\com\example\delivery_platform\view\RegisterController.java
+D:\liupiao\中南大学\我的大学\大二上\Java实训\外卖平台\src\main\java\com\example\delivery_platform\LoginWindow.java
+D:\liupiao\中南大学\我的大学\大二上\Java实训\外卖平台\src\main\java\com\example\delivery_platform\view\LoginController.java
+D:\liupiao\中南大学\我的大学\大二上\Java实训\外卖平台\src\main\java\module-info.java
+D:\liupiao\中南大学\我的大学\大二上\Java实训\外卖平台\src\main\java\com\example\delivery_platform\MySQLTest\Test.java
+>>>>>>> 6e3fbea40b56c3e01cdf05254bb0c8bddd337d89
