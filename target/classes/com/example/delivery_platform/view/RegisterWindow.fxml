@@ -7,7 +7,11 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.RegisterController">
    <children>
+<<<<<<< HEAD
       <Button fx:id="returnBtn" layoutX="25.0" layoutY="29.0" mnemonicParsing="false" onAction="#onRegisterBtnClicked" style="-fx-cursor: hand;" text="返回" />
+=======
+      <Button fx:id="returnBtn" layoutX="25.0" layoutY="29.0" mnemonicParsing="false" onAction="#onReturnBtnClicked" style="-fx-cursor: hand;" text="返回" />
+>>>>>>> 6e3fbea40b56c3e01cdf05254bb0c8bddd337d89
       <ImageView fitHeight="204.0" fitWidth="246.0" layoutX="39.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/R-C.jpg" />
