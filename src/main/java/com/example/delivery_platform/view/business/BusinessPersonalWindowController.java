@@ -1,4 +1,4 @@
-package com.example.delivery_platform.view.Business;
+package com.example.delivery_platform.view.business;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,7 +37,7 @@ public class BusinessPersonalWindowController {
 
     @FXML
     void onchangePasswdBtnClicked(ActionEvent event) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("Business/BusinessChangePasswd.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("BusinessChangePasswd.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = new Stage();
         stage.setTitle("修改密码");

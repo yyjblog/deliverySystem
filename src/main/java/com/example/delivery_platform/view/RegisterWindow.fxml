@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.RegisterController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.RegisterController">
    <children>
-      <Button fx:id="returnBtn" layoutX="25.0" layoutY="29.0" mnemonicParsing="false" onAction="#onRegisterBtnClicked" style="-fx-cursor: hand;" text="返回" />
+      <Button fx:id="returnBtn" layoutX="25.0" layoutY="29.0" mnemonicParsing="false" onAction="#onReturnBtnClicked" style="-fx-cursor: hand;" text="返回" />
       <ImageView fitHeight="204.0" fitWidth="246.0" layoutX="39.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/R-C.jpg" />
@@ -18,7 +19,7 @@
             <Font size="33.0" />
          </font>
       </Label>
-      <Button fx:id="registerBtn" layoutX="388.0" layoutY="340.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="150.0" style="-fx-cursor: hand;" text="注册" />
+      <Button fx:id="registerBtn" layoutX="388.0" layoutY="340.0" mnemonicParsing="false" onAction="#onRegisterBtnClicked" prefHeight="36.0" prefWidth="150.0" style="-fx-cursor: hand;" text="注册" />
       <Button fx:id="verificationBtn" layoutX="334.0" layoutY="260.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="84.0" text="获取验证码">
          <font>
             <Font size="12.0" />

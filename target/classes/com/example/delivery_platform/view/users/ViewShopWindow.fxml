@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.users.ViewShopWindowController">
+    <children>
+        <Label layoutX="8.0" layoutY="157.0" prefHeight="102.0" prefWidth="95.0" text="用户点餐" />
+        <TableView fx:id="shopTableView" layoutX="86.0" layoutY="30.0" prefHeight="355.0" prefWidth="459.0">
+            <columns>
+                <TableColumn prefWidth="83.0" text="商家名" />
+                <TableColumn prefWidth="150.0" text="菜品详情" />
+                <TableColumn prefWidth="127.0" text="位置" />
+                <TableColumn prefWidth="94.0" text="商家图片" />
+            </columns>
+        </TableView>
+      <Separator layoutX="85.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="4.0" />
+    </children>
+</AnchorPane>

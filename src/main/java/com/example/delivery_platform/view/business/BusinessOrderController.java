@@ -1,4 +1,4 @@
-package com.example.delivery_platform.view.Business;
+package com.example.delivery_platform.view.business;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;

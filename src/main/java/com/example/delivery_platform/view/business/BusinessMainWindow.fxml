@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="651.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.Business.BusinessMainWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="651.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.business.BusinessMainWindowController">
    <children>
       <Separator layoutX="72.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="4.0" style="-fx-border-color: black;" />
       <BorderPane fx:id="mainPage" layoutY="-2.0" prefHeight="468.0" prefWidth="651.0">

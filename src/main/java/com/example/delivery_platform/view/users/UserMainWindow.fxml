@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="651.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.users.UserMainWindowController">
+    <children>
+        <Separator layoutX="72.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="4.0" style="-fx-border-color: black;" />
+        <BorderPane fx:id="mainPage" layoutY="-2.0" prefHeight="468.0" prefWidth="651.0">
+            <left>
+                <VBox prefHeight="468.0" prefWidth="80.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="headImageBtn" mnemonicParsing="false" onAction="#headImageBtnClicked" prefHeight="66.0" prefWidth="76.0" style="-fx-cursor: hand; -fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fitHeight="56.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/R-C.jpg" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="buyBtn" mnemonicParsing="false" onAction="#onBuyBtnClicked" prefHeight="72.0" prefWidth="73.0" text="点单" />
+                        <Button fx:id="orderBtn" mnemonicParsing="false" onAction="#onOrderBtnClicked" prefHeight="66.0" prefWidth="73.0" text="订单" />
+                        <Button fx:id="talkBtn" mnemonicParsing="false" onAction="#onTalkBtnClicked" prefHeight="63.0" prefWidth="73.0" text="会话" />
+                    </children>
+                </VBox>
+            </left>
+        </BorderPane>
+    </children>
+</AnchorPane>

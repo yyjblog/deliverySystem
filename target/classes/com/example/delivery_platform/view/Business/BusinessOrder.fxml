@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.Business.BusinessOrderController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.business.BusinessOrderController">
    <children>
       <Label layoutX="24.0" layoutY="131.0" prefHeight="116.0" prefWidth="62.0" text="店铺订单" />
       <Separator layoutX="86.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="5.0" />
