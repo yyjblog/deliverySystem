@@ -7,10 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-<<<<<<< HEAD
-=======
 import javafx.scene.Node;
->>>>>>> 6e3fbea40b56c3e01cdf05254bb0c8bddd337d89
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -69,7 +66,7 @@ public class RegisterController implements Initializable {
         roleChoiceBox.getSelectionModel().selectFirst();
     }
 
-<<<<<<< HEAD
+
 
     @FXML
     void onRegisterBtnClicked(ActionEvent event) throws IOException {
@@ -83,7 +80,7 @@ public class RegisterController implements Initializable {
         thisStage.close();
     }
 
-=======
+
     @FXML
     protected  void onReturnBtnClicked(ActionEvent event) throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("loginWindow.fxml"));
@@ -93,5 +90,5 @@ public class RegisterController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
->>>>>>> 6e3fbea40b56c3e01cdf05254bb0c8bddd337d89
+
 }
