@@ -3,6 +3,7 @@ package com.example.delivery_platform.view;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,8 +12,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class LoginController {
+public class LoginController implements Initializable {
     @FXML
     private Button loginButton;
     @FXML
@@ -41,10 +44,19 @@ public class LoginController {
     void onRegisterClicked(ActionEvent event) throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("RegisterWindow.fxml"));
         Scene scene = new Scene(anchorPane);
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Stage stage=new Stage();
         stage.setTitle("注册界面");
         stage.setScene(scene);
         stage.show();
+        Stage thisStage = (Stage) registerBtn.getScene().getWindow();
+        thisStage.hide();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
+
+
 }

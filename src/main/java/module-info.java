@@ -8,5 +8,7 @@ module com.example.delivery_platform {
 
     exports com.example.delivery_platform;
     exports com.example.delivery_platform.view;
+    exports com.example.delivery_platform.view.Business;
+    opens com.example.delivery_platform.view.Business to javafx.fxml;
 
 }

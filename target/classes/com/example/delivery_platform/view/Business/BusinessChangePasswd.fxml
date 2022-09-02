@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.Business.BusinessChangePasswdController">
+   <children>
+      <GridPane layoutX="76.0" layoutY="29.0" prefHeight="196.0" prefWidth="472.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="127.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="246.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="167.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="56.0" prefWidth="173.0" text="请输入原始密码" />
+            <TextField fx:id="oldPasswd" prefHeight="31.0" prefWidth="187.0" GridPane.columnIndex="1" />
+            <Label prefHeight="38.0" prefWidth="158.0" text="请输入新密码" GridPane.rowIndex="1" />
+            <TextField fx:id="newPasswd_1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="请再次输入新密码" GridPane.rowIndex="2" />
+            <TextField fx:id="newPasswd_2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button fx:id="commitBtn" layoutX="167.0" layoutY="299.0" mnemonicParsing="false" text="确定" />
+      <Button fx:id="cancelBrn" layoutX="350.0" layoutY="299.0" mnemonicParsing="false" text="取消" />
+   </children>
+</AnchorPane>
