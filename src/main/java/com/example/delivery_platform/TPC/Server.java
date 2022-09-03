@@ -1,4 +1,4 @@
-package com.example.delivery_platform.TPC;
+package com.example.delivery_platform.view.TPC;
 
 import java.io.IOException;
 import java.net.ServerSocket;

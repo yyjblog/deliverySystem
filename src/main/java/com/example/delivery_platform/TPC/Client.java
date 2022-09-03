@@ -1,4 +1,4 @@
-package com.example.delivery_platform.TPC;
+package com.example.delivery_platform.view.TPC;
 
 import java.net.Socket;
 
@@ -17,4 +17,6 @@ public class Client {
         this.host = host;
         this.port = port;
     }
+
+
 }
