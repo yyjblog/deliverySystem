@@ -12,9 +12,17 @@ public class RiderMainWindowController implements Initializable {
     @FXML
     private AnchorPane anchorPane;
 
+    private Stage stage;
+
+    private Stage getStage() {
+        if (stage == null) {
+            stage = (Stage) anchorPane.getScene().getWindow();
+        }
+        return stage;
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        Stage thisStage = (Stage) anchorPane.getScene().getWindow();
-//        thisStage.setTitle("骑手界面");
+        var stage = getStage();
+        stage.setTitle("骑手界面");
     }
 }
