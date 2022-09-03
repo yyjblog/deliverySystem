@@ -45,7 +45,7 @@ public class BusinessMainWindowController implements Initializable {
     //商铺点击
     @FXML
     void onShopBtnClicked(ActionEvent event) throws IOException {
-        URL resource = getClass().getResource("shopWindow.fxml");
+        URL resource = getClass().getResource("ShopWindow.fxml");
         setCenter(resource);
     }
 
@@ -58,7 +58,6 @@ public class BusinessMainWindowController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        Stage thisStage = (Stage) mainPage.getScene().getWindow();
-//        thisStage.setTitle("商家界面");
+
     }
 }

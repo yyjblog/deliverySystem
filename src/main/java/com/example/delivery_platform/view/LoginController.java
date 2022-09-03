@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -29,6 +28,8 @@ public class LoginController implements Initializable {
     @FXML
     private Button registerBtn;
 
+    private Stage stage =null;
+
     @FXML
     void onLoginClicked(ActionEvent event) throws IOException {
 
@@ -48,8 +49,8 @@ public class LoginController implements Initializable {
         stage.setTitle("注册界面");
         stage.setScene(scene);
         stage.show();
-        Stage thisStage = (Stage) registerBtn.getScene().getWindow();
-        thisStage.hide();
+        stage = (Stage) registerBtn.getScene().getWindow();
+        stage.close();
     }
 
     @Override
@@ -57,6 +58,7 @@ public class LoginController implements Initializable {
 
 
     }
+
 
 
 

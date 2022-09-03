@@ -61,6 +61,8 @@ public class RegisterController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
         roleChoiceBox.getItems().addAll("普通用户","商家","骑手");
         roleChoiceBox.getSelectionModel().selectFirst();
 
@@ -74,6 +76,7 @@ public class RegisterController implements Initializable {
 
         String role = roleChoiceBox.getValue();
         AnchorPane anchorPane = null;
+
         switch (role) {
             case "普通用户":
                 anchorPane = FXMLLoader.load(this.getClass().getResource("users/UserMainWindow.fxml"));
@@ -88,7 +91,7 @@ public class RegisterController implements Initializable {
             Scene scene = new Scene(anchorPane);
             Stage stage = new Stage();
             stage.setScene(scene);
-            stage.setTitle("登录界面");
+            stage.setTitle(role);
             stage.show();
             Stage thisStage = (Stage) registerBtn.getScene().getWindow();
             thisStage.close();

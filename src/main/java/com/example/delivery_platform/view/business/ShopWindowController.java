@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-public class shopWindowController {
+public class ShopWindowController {
 
     @FXML
     private Button changeShopPlaceBtn;
