@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.rider.RiderTalkWindowController">
+    <children>
+        <TextArea fx:id="messageTextField" layoutX="25.0" layoutY="269.0" prefHeight="102.0" prefWidth="397.0" promptText="请输入内容" />
+        <Button fx:id="sendBtn" layoutX="443.0" layoutY="308.0" mnemonicParsing="false" text="发送" />
+        <TextArea fx:id="talkTextField" layoutX="25.0" layoutY="41.0" prefHeight="206.0" prefWidth="485.0" />
+        <Label fx:id="talkObject" layoutX="25.0" layoutY="14.0" prefHeight="36.0" prefWidth="90.0" text="谈话对象" />
+    </children>
+</AnchorPane>

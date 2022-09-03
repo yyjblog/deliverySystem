@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.rider.RiderTaskWindowController">
+   <children>
+      <Label layoutX="7.0" layoutY="188.0" prefHeight="48.0" prefWidth="56.0" text="我的任务" />
+      <Separator layoutX="56.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="2.0" />
+      <TabPane layoutX="57.0" layoutY="24.0" prefHeight="345.0" prefWidth="438.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="待接单">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="336.0" prefWidth="502.0">
+                     <children>
+                        <TableView fx:id="taskWaitingTableView12" prefHeight="322.0" prefWidth="438.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="商家" />
+                              <TableColumn prefWidth="62.333343505859375" text="下单用户" />
+                              <TableColumn prefWidth="105.0" text="用户邮箱" />
+                              <TableColumn prefWidth="70.66665649414062" text="下单时间" />
+                              <TableColumn prefWidth="122.66668701171875" text="菜品详情" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="进行中">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="305.0" prefWidth="391.0">
+                     <children>
+                        <TableView fx:id="taskWaitingTableView1" prefHeight="322.0" prefWidth="438.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="商家" />
+                              <TableColumn prefWidth="62.333343505859375" text="下单用户" />
+                              <TableColumn prefWidth="105.0" text="用户邮箱" />
+                              <TableColumn prefWidth="70.66665649414062" text="下单时间" />
+                              <TableColumn prefWidth="122.66668701171875" text="菜品详情" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="已配送">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="taskWaitingTableView11" prefHeight="322.0" prefWidth="438.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="商家" />
+                              <TableColumn prefWidth="62.333343505859375" text="下单用户" />
+                              <TableColumn prefWidth="105.0" text="用户邮箱" />
+                              <TableColumn prefWidth="70.66665649414062" text="下单时间" />
+                              <TableColumn prefWidth="122.66668701171875" text="菜品详情" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

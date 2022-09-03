@@ -39,7 +39,7 @@ public class UserMainWindowController implements Initializable {
     }
 
     @FXML
-    void headImageBtnClicked(ActionEvent event) throws IOException {
+    void onHeadImageBtnClicked(ActionEvent event) throws IOException {
         URL resource = getClass().getResource("UserPersonalWindow.fxml");
         setCenter(resource);
     }
@@ -64,8 +64,6 @@ public class UserMainWindowController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        Stage thisStage = (Stage) mainPage.getScene().getWindow();
-//        thisStage.setTitle("用户界面");
 
     }
 }

@@ -11,18 +11,18 @@
          <left>
             <VBox prefHeight="468.0" prefWidth="80.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="headImageBtn" mnemonicParsing="false" onAction="#headImageBtnClicked" prefHeight="66.0" prefWidth="76.0" style="-fx-cursor: hand; -fx-background-color: transparent;">
+                  <Button fx:id="headImageBtn" mnemonicParsing="false" onAction="#onHeadImageBtnClicked" prefHeight="66.0" prefWidth="76.0" style="-fx-cursor: hand; -fx-background-color: transparent;">
                      <graphic>
-                        <ImageView fitHeight="56.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="56.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <image>
                               <Image url="@../image/R-C.jpg" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="orderBtn" mnemonicParsing="false" onAction="#onOrderBtnClicked" prefHeight="72.0" prefWidth="73.0" text="订单" />
-                  <Button fx:id="shopBtn" mnemonicParsing="false" onAction="#onShopBtnClicked" prefHeight="66.0" prefWidth="73.0" text="店铺" />
-                  <Button fx:id="talkBtn" mnemonicParsing="false" onAction="#onTalkBtnClicked" prefHeight="63.0" prefWidth="73.0" text="会话" />
+                  <Button fx:id="orderBtn" mnemonicParsing="false" onAction="#onOrderBtnClicked" prefHeight="72.0" prefWidth="73.0" style="-fx-cursor: hand;" text="订单" />
+                  <Button fx:id="shopBtn" mnemonicParsing="false" onAction="#onShopBtnClicked" prefHeight="66.0" prefWidth="73.0" style="-fx-cursor: hand;" text="店铺" />
+                  <Button fx:id="talkBtn" mnemonicParsing="false" onAction="#onTalkBtnClicked" prefHeight="63.0" prefWidth="73.0" style="-fx-cursor: hand;" text="会话" />
                </children>
             </VBox>
          </left>

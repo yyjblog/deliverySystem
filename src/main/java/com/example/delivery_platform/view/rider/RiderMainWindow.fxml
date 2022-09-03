@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.rider.RiderMainWindowController">
-
+   <children>
+      <Separator layoutX="71.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="1.0" />
+      <BorderPane fx:id="mainPage" prefHeight="400.0" prefWidth="600.0">
+         <left>
+            <VBox prefHeight="400.0" prefWidth="73.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="headImageBtn" mnemonicParsing="false" onAction="#onHeadImageBtnClicked" prefHeight="70.0" prefWidth="72.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/R-C.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="taskBtn" mnemonicParsing="false" onAction="#onTaskBtnClicked" prefHeight="72.0" prefWidth="80.0" style="-fx-cursor: hand;" text="任务" />
+                  <Button fx:id="talkBtn" mnemonicParsing="false" onAction="#onTalkBtnClicked" prefHeight="72.0" prefWidth="80.0" style="-fx-cursor: hand;" text="会话" />
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
 </AnchorPane>

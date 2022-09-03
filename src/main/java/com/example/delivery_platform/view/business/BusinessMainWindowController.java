@@ -30,7 +30,7 @@ public class BusinessMainWindowController implements Initializable {
     }
     //头像点击
     @FXML
-    protected void headImageBtnClicked(ActionEvent event) throws IOException {
+    protected void onHeadImageBtnClicked(ActionEvent event) throws IOException {
         URL resource = getClass().getResource("BusinessPersonalWindow.fxml");
         setCenter(resource);
     }
