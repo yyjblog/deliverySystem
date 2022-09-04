@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.RegisterController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.RegisterController">
    <children>
       <Button fx:id="returnBtn" layoutX="25.0" layoutY="29.0" mnemonicParsing="false" onAction="#onReturnBtnClicked" style="-fx-cursor: hand;" text="返回" />
-      <ImageView fitHeight="204.0" fitWidth="246.0" layoutX="39.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="204.0" fitWidth="246.0" layoutX="7.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/R-C.jpg" />
          </image></ImageView>
       <Label fx:id="slogansLabel" layoutX="39.0" layoutY="312.0" prefHeight="55.0" prefWidth="203.0" text="更快！更早！更强！" />
-      <Label fx:id="registerLabel" layoutX="361.0" layoutY="20.0" prefHeight="91.0" prefWidth="203.0" text="新用户注册">
+      <Label fx:id="registerLabel_1" layoutX="361.0" layoutY="20.0" prefHeight="91.0" prefWidth="203.0" text="新用户注册">
          <font>
             <Font size="33.0" />
          </font>
       </Label>
-      <Button fx:id="registerBtn" layoutX="388.0" layoutY="340.0" mnemonicParsing="false" onAction="#onRegisterBtnClicked" prefHeight="36.0" prefWidth="150.0" style="-fx-cursor: hand;" text="注册" />
-      <Button fx:id="verificationBtn" layoutX="334.0" layoutY="260.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="84.0" text="获取验证码">
+      <Button fx:id="registerBtn" layoutX="388.0" layoutY="340.0" mnemonicParsing="false" onAction="#onRegisterBtnClicked" prefHeight="36.0" prefWidth="150.0" style="-fx-cursor: hand;" text="注册并登录" />
+      <Button fx:id="verificationBtn" layoutX="334.0" layoutY="260.0" mnemonicParsing="false" onAction="#getVertificationCode" prefHeight="23.0" prefWidth="84.0" text="获取验证码">
          <font>
             <Font size="12.0" />
          </font></Button>
@@ -31,5 +30,9 @@
       <Label fx:id="roleLabel" layoutX="225.0" layoutY="302.0" prefHeight="34.0" prefWidth="151.0" text="请选择您的身份" />
       <ChoiceBox fx:id="roleChoiceBox" layoutX="225.0" layoutY="340.0" prefWidth="150.0" />
       <TextField fx:id="passwd_1TextField" layoutX="333.0" layoutY="169.0" prefHeight="23.0" prefWidth="231.0" promptText="请再次输入密码" />
+      <Label fx:id="registerLabel" layoutX="245.0" layoutY="215.0" prefHeight="15.0" prefWidth="84.0" text=" " textFill="RED" />
+      <Label fx:id="CheckPasswordLabel" layoutX="241.0" layoutY="173.0" prefHeight="15.0" prefWidth="84.0" text=" " textFill="RED" />
+      <Label fx:id="UserNameLabel" layoutX="226.0" layoutY="104.0" prefHeight="15.0" prefWidth="73.0" textFill="RED" />
+      <Label fx:id="vertificationLabel" layoutX="240.0" layoutY="264.0" prefHeight="15.0" prefWidth="84.0" text=" " textFill="RED" />
    </children>
 </AnchorPane>

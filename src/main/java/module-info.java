@@ -1,6 +1,8 @@
 module com.example.delivery_platform {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires javax.mail;
 
 
     opens com.example.delivery_platform to javafx.fxml;

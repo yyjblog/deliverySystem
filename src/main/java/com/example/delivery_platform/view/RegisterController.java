@@ -1,6 +1,7 @@
 package com.example.delivery_platform.view;
 
-
+import com.example.delivery_platform.dao.UserDao;
+import com.example.delivery_platform.mail.Mail;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -16,6 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import javax.mail.MessagingException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,6 +29,15 @@ public class RegisterController implements Initializable {
 
     @FXML
     private Label registerLabel;
+
+    @FXML
+    private Label CheckPasswordLabel;
+
+    @FXML
+    private Label UserNameLabel;
+
+    @FXML
+    private Label vertificationLabel;
 
     @FXML
     private TextField emailTextField;
@@ -58,6 +69,13 @@ public class RegisterController implements Initializable {
     @FXML
     private Button returnBtn;
 
+    //lws新增
+
+    Mail mail = new Mail();
+
+
+    public String mailResult;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -70,34 +88,118 @@ public class RegisterController implements Initializable {
     }
 
 
+    //进行注册
     @FXML
     void onRegisterBtnClicked(ActionEvent event) throws IOException {
 
+        try {
 
-        String role = roleChoiceBox.getValue();
-        AnchorPane anchorPane = null;
+            UserDao userDao = new UserDao();
+            String UserName = nameTextField.getText();
+            String UserPassword = passwdTextField.getText();
+            String UserPassword_1 = passwd_1TextField.getText();
+            String UserAccount = emailTextField.getText();
+            String UserRole = roleChoiceBox.getValue();
+            String getVertificationCode = verificationTextField.getText();
 
-        switch (role) {
-            case "普通用户":
-                anchorPane = FXMLLoader.load(this.getClass().getResource("users/UserMainWindow.fxml"));
-                break;
-            case "商家":
-                anchorPane = FXMLLoader.load(this.getClass().getResource("business/BusinessMainWindow.fxml"));
-                break;
-            case "骑手":
-                anchorPane = FXMLLoader.load(this.getClass().getResource("rider/RiderMainWindow.fxml"));
-                break;
+
+
+
+            AnchorPane anchorPane = null;
+
+
+            //-----查找邮箱是否已经被注册了-----
+            //查找是否数据库中已有的邮箱有与现在输入的邮箱一致的
+            //这里可能有问题，没写完lp
+            userDao.getUserAccount(UserAccount);
+            /*if(userDao.UserAccountResult == null) {
+                    userDao.addUser(UserAccount, UserPassword, UserName, UserRole, "");
+
+            }else{
+                registerLabel.setText("该邮箱已注册！");
+            }*/
+            //每次点击注册都让所有本文变为空
+            /*
+             *
+             *
+             * 逻辑问题，可能要改改
+             * */
+            CheckPasswordLabel.setText("");
+            UserNameLabel.setText("");
+            vertificationLabel.setText("");
+            registerLabel.setText("");
+
+            //发送验证码
+            String VertificationCode = mail.getResult;
+
+            if(UserName.length() == 0){
+                UserNameLabel.setText("请填写昵称");
+            }else{
+                if(UserPassword.equals(UserPassword_1)){
+                    if(userDao.UserAccountResult == null){
+                        if(getVertificationCode.length() == 0 ){
+                            vertificationLabel.setText("请先获取验证码");
+                        }else {
+                            if (VertificationCode.equals(getVertificationCode)) {
+                                userDao.addUser(UserAccount, UserPassword, UserName, UserRole, "");
+
+
+
+                                switch (UserRole) {
+                                    case "普通用户":
+                                        anchorPane = FXMLLoader.load(this.getClass().getResource("users/UserMainWindow.fxml"));
+                                        break;
+                                    case "商家":
+                                        anchorPane = FXMLLoader.load(this.getClass().getResource("business/BusinessMainWindow.fxml"));
+                                        break;
+                                    case "骑手":
+                                        anchorPane = FXMLLoader.load(this.getClass().getResource("rider/RiderMainWindow.fxml"));
+                                        break;
+                                }
+
+                                Scene scene = new Scene(anchorPane);
+                                Stage stage = new Stage();
+                                stage.setScene(scene);
+                                stage.setTitle(UserRole);
+                                stage.show();
+                                Stage thisStage = (Stage) registerBtn.getScene().getWindow();
+                                thisStage.close();
+
+
+                            } else {
+                                vertificationLabel.setText("请输入正确的验证码");
+                            }
+                        }
+                    }else{
+                        registerLabel.setText("邮箱已注册");
+                    }
+                }else{
+                    CheckPasswordLabel.setText("请填写两次相同的密码");
+                }
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-            Scene scene = new Scene(anchorPane);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle(role);
-            stage.show();
-            Stage thisStage = (Stage) registerBtn.getScene().getWindow();
-            thisStage.close();
+
+    }
+    //获取验证码
+    @FXML
+    void getVertificationCode(ActionEvent event) throws IOException {
+        String UserAccount;
+        UserAccount = emailTextField.getText();
+        try {
+            UserAccount = emailTextField.getText();
+            mail.sendMail(UserAccount);
+//            System.out.println("验证码是：" + mail.getResult);
+        } catch (MessagingException e) {
+            e.printStackTrace();
         }
 
+    }
 
+    //返回登录界面
     @FXML
     void onReturnBtnClicked(ActionEvent event) throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("LoginWindow.fxml"));
