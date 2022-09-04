@@ -1,5 +1,6 @@
 package com.example.delivery_platform.view.users;
 
+import com.example.delivery_platform.TPC.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class UserMainWindowController implements Initializable {
+public class UserMainWindowController extends Client{
 
     @FXML
     private Button headImageBtn;
@@ -29,6 +30,11 @@ public class UserMainWindowController implements Initializable {
 
     @FXML
     private Button orderBtn;
+
+    //创建客户端
+    public void initialize(){
+        super.connect("user");
+    }
 
     //设置中心区域
     private void setCenter(URL url) throws IOException {
@@ -60,10 +66,5 @@ public class UserMainWindowController implements Initializable {
     void onTalkBtnClicked(ActionEvent event) throws IOException {
         URL resource = getClass().getResource("UserTalkWindow.fxml");
         setCenter(resource);
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 }

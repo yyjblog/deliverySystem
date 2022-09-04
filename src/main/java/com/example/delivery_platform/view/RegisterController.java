@@ -1,6 +1,6 @@
 package com.example.delivery_platform.view;
 
-
+import com.example.delivery_platform.TPC.Client;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -73,7 +73,6 @@ public class RegisterController implements Initializable {
     @FXML
     void onRegisterBtnClicked(ActionEvent event) throws IOException {
 
-
         String role = roleChoiceBox.getValue();
         AnchorPane anchorPane = null;
 
@@ -88,14 +87,14 @@ public class RegisterController implements Initializable {
                 anchorPane = FXMLLoader.load(this.getClass().getResource("rider/RiderMainWindow.fxml"));
                 break;
         }
-            Scene scene = new Scene(anchorPane);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setTitle(role);
-            stage.show();
-            Stage thisStage = (Stage) registerBtn.getScene().getWindow();
-            thisStage.close();
-        }
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle(role);
+        stage.show();
+        Stage thisStage = (Stage) registerBtn.getScene().getWindow();
+        thisStage.close();
+    }
 
 
     @FXML

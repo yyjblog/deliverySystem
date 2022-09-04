@@ -3,12 +3,12 @@ com\example\delivery_platform\model\Business.class
 com\example\delivery_platform\view\users\ViewShopWindowController.class
 com\example\delivery_platform\view\LoginController.class
 com\example\delivery_platform\view\business\BusinessMainWindowController.class
+com\example\delivery_platform\view\rider\RiderChangePasswdController.class
 module-info.class
 com\example\delivery_platform\model\Rider.class
 com\example\delivery_platform\view\business\BusinessChangePasswdController.class
-com\example\delivery_platform\view\TPC\Client.class
 com\example\delivery_platform\model\Commodity.class
-com\example\delivery_platform\view\TPC\Server.class
+com\example\delivery_platform\view\rider\RiderTalkWindowController.class
 com\example\delivery_platform\view\business\BusinessTalkWindowController.class
 com\example\delivery_platform\view\users\UserOrderWindowController.class
 com\example\delivery_platform\model\User.class
@@ -17,10 +17,11 @@ com\example\delivery_platform\view\rider\RiderMainWindowController.class
 com\example\delivery_platform\view\users\UserTalkWindowController.class
 com\example\delivery_platform\TPC\Server.class
 com\example\delivery_platform\view\business\BusinessOrderController.class
-com\example\delivery_platform\view\TPC\ServerThread.class
 com\example\delivery_platform\view\users\UserPersonalWindowController.class
 com\example\delivery_platform\LoginWindow.class
 com\example\delivery_platform\TPC\Client.class
 com\example\delivery_platform\view\business\BusinessPersonalWindowController.class
 com\example\delivery_platform\view\RegisterController.class
+com\example\delivery_platform\view\rider\RiderTaskWindowController.class
 com\example\delivery_platform\view\business\ShopWindowController.class
+com\example\delivery_platform\view\rider\RiderPersonalWindowController.class
