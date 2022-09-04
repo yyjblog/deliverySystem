@@ -1,4 +1,4 @@
-package com.example.delivery_platform.view.TPC;
+package com.example.delivery_platform.TPC;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -19,7 +19,7 @@ public class Server {
             while(true){
                 socket=serverSocket.accept();
                 System.out.println("收到新请求");
-                new ServerThread(socket).start();//为连接的客户单独创建一个线程对数据处理
+                new com.example.delivery_platform.TPC.ServerThread(socket).start();//为连接的客户单独创建一个线程对数据处理
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

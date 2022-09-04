@@ -1,4 +1,4 @@
-package com.example.delivery_platform.view.TPC;
+package com.example.delivery_platform.TPC;
 
 import java.net.Socket;
 
