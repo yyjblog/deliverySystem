@@ -2,6 +2,8 @@ package com.example.delivery_platform.view;
 
 import com.example.delivery_platform.dao.UserDao;
 import com.example.delivery_platform.mail.Mail;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
@@ -21,7 +24,9 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable {
 
     private Stage stage =null;
-
+    private Timeline animation;
+    private String S = "";
+    private int tmp = 62;
     //lws新增成员
     @FXML
     private TextField mailTextFiled;
@@ -125,6 +130,8 @@ public class LoginController implements Initializable {
 
     @FXML
     void onVerificationClicked(ActionEvent event) throws IOException {
+        tmp=61;
+        Clock();
         String UserAccount;
         UserAccount = mailTextFiled.getText();
         try {
@@ -147,6 +154,23 @@ public class LoginController implements Initializable {
         stage.show();
         Stage thisStage = (Stage) registerBtn.getScene().getWindow();
         thisStage.hide();
+    }
+    public void timelabel() {
+        if (tmp>0) {
+            verificationBtn.setDisable(true);
+            tmp--;
+        }
+        S = tmp + "s";
+        verificationBtn.setText(S);
+        if(tmp==0) {
+            verificationBtn.setText("获取验证码");
+            verificationBtn.setDisable(false);
+        }
+    }
+    public void Clock() {
+        animation = new Timeline(new KeyFrame(Duration.millis(1000), e -> timelabel()));
+        animation.setCycleCount(Timeline.INDEFINITE);
+        animation.play();
     }
 
     @Override

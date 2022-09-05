@@ -2,6 +2,8 @@ package com.example.delivery_platform.view;
 
 import com.example.delivery_platform.dao.UserDao;
 import com.example.delivery_platform.mail.Mail;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -16,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
@@ -72,7 +75,9 @@ public class RegisterController implements Initializable {
     //lws新增
 
     Mail mail = new Mail();
-
+    private Timeline animation;
+    private String S = "";
+    private int tmp = 62;
 
     public String mailResult;
 
@@ -187,6 +192,8 @@ public class RegisterController implements Initializable {
     //获取验证码
     @FXML
     void getVertificationCode(ActionEvent event) throws IOException {
+        tmp=61;
+        Clock();
         String UserAccount;
         UserAccount = emailTextField.getText();
         try {
@@ -198,7 +205,23 @@ public class RegisterController implements Initializable {
         }
 
     }
-
+    public void timelabel() {
+        if (tmp>0) {
+            verificationBtn.setDisable(true);
+            tmp--;
+        }
+        S = tmp + "s";
+        verificationBtn.setText(S);
+        if(tmp==0) {
+            verificationBtn.setText("获取验证码");
+            verificationBtn.setDisable(false);
+        }
+    }
+    public void Clock() {
+        animation = new Timeline(new KeyFrame(Duration.millis(1000), e -> timelabel()));
+        animation.setCycleCount(Timeline.INDEFINITE);
+        animation.play();
+    }
     //返回登录界面
     @FXML
     void onReturnBtnClicked(ActionEvent event) throws IOException {
