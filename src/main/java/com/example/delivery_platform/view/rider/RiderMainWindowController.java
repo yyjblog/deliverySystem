@@ -1,5 +1,6 @@
 package com.example.delivery_platform.view.rider;
 
+import com.example.delivery_platform.TPC.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RiderMainWindowController implements Initializable {
+public class RiderMainWindowController extends Client implements Initializable {
     @FXML
     private AnchorPane anchorPane;
 
@@ -32,6 +33,7 @@ public class RiderMainWindowController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        super.connect("rider");
     }
 
     //设置中心区域

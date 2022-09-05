@@ -7,7 +7,7 @@ public class Database {
     private String url ="jdbc:mysql://localhost:3306/testdb?useSSL=true&useUnicode=true&characterEncoding=utf-8&iserverTimezone=Asia/Shanghai";
     private final static String driver = "com.mysql.cj.jdbc.Driver";
     private String userName = "root"; //数据库账号名
-    private String password = "123456"; //数据库密码
+    private String password = "452544248"; //数据库密码
     private Connection connection;
 
     //连接数据库

@@ -1,5 +1,6 @@
 package com.example.delivery_platform.view.business;
 
+import com.example.delivery_platform.TPC.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,13 +14,18 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BusinessMainWindowController implements Initializable {
+public class BusinessMainWindowController extends Client implements Initializable {
 
     @FXML
     private BorderPane mainPage;
 
     @FXML
     private Button headImageBtn;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        super.connect("business");
+    }
 
     //设置中心区域
     private void setCenter(URL url) throws IOException {
@@ -54,10 +60,5 @@ public class BusinessMainWindowController implements Initializable {
     void onTalkBtnClicked(ActionEvent event) throws IOException {
         URL resource = getClass().getResource("BusinessTalkWindow.fxml");
         setCenter(resource);
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 }
