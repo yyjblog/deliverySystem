@@ -5,6 +5,10 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.util.Iterator;
+import java.util.Map;
+
+import static com.example.delivery_platform.TPC.Server.*;
 
 public class ServerThread extends Thread{
     private Socket socket;
@@ -20,10 +24,33 @@ public class ServerThread extends Thread{
             while(true){
                 DataInputStream in = new DataInputStream(socket.getInputStream());
                 String accept = in.readUTF();
+
                 System.out.println(accept);
             }
         } catch (IOException e) {
             try {
+                int if_execute = 0;
+                Iterator<Socket> it = user_list.iterator();
+                while(it.hasNext()&&if_execute==0){
+                    if(it.next() == socket){
+                        it.remove();
+                        if_execute=1;
+                    }
+                }
+                it = business_list.iterator();
+                while(it.hasNext()&&if_execute==0){
+                    if(it.next() == socket){
+                        it.remove();
+                        if_execute=1;
+                    }
+                }
+                it = rider_list.iterator();
+                while(it.hasNext()&&if_execute==0){
+                    if(it.next() == socket){
+                        it.remove();
+                        if_execute=1;
+                    }
+                }
                 socket.close();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
