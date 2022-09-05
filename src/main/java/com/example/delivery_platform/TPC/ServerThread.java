@@ -25,6 +25,7 @@ public class ServerThread extends Thread{
         } catch (IOException e) {
             try {
                 socket.close();
+//                Iterable<String> it = 
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
