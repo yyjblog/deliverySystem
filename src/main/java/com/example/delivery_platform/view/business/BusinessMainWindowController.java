@@ -15,12 +15,21 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class BusinessMainWindowController extends Client implements Initializable {
+    @FXML
+    private Button shopBtn;
+
+    @FXML
+    private Button headImageBtn;
 
     @FXML
     private BorderPane mainPage;
 
     @FXML
-    private Button headImageBtn;
+    private Button talkBtn;
+
+    @FXML
+    private Button orderBtn;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

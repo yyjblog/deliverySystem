@@ -15,7 +15,7 @@
                      <graphic>
                         <ImageView fitHeight="56.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
                            <image>
-                              <Image url="@../../../../../../../../../../../image/R-C.jpg" />
+                              <Image url="@../image/R-C.jpg" />
                            </image>
                         </ImageView>
                      </graphic>

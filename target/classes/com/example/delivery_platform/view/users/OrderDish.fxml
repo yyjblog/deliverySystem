@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.users.OrderDishController">
+   <children>
+      <TableView fx:id="dishTableView" layoutX="118.0" layoutY="19.0" prefHeight="358.0" prefWidth="475.0">
+        <columns>
+          <TableColumn prefWidth="90.0" text="菜品" />
+          <TableColumn prefWidth="90.0" text="图片" />
+            <TableColumn prefWidth="66.0" text="价格" />
+            <TableColumn prefWidth="126.0" text="备注" />
+            <TableColumn prefWidth="102.0" text="添加/删除" />
+        </columns>
+      </TableView>
+      <Button fx:id="returnBtn" layoutX="34.0" layoutY="28.0" mnemonicParsing="false" onAction="#onReturnBtnClicked" text="返回" />
+      <Button fx:id="orderBtn" layoutX="34.0" layoutY="294.0" mnemonicParsing="false" onAction="#onOrderBtnClicked" text="下单" />
+   </children>
+</AnchorPane>
