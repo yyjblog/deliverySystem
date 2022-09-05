@@ -4,6 +4,7 @@ import com.example.delivery_platform.dao.UserDao;
 import com.example.delivery_platform.mail.Mail;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import com.example.delivery_platform.TPC.Client;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -96,7 +97,6 @@ public class RegisterController implements Initializable {
     //进行注册
     @FXML
     void onRegisterBtnClicked(ActionEvent event) throws IOException {
-
         try {
 
             UserDao userDao = new UserDao();
@@ -187,7 +187,27 @@ public class RegisterController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        String role = roleChoiceBox.getValue();
+        AnchorPane anchorPane = null;
 
+        switch (role) {
+            case "普通用户":
+                anchorPane = FXMLLoader.load(this.getClass().getResource("users/UserMainWindow.fxml"));
+                break;
+            case "商家":
+                anchorPane = FXMLLoader.load(this.getClass().getResource("business/BusinessMainWindow.fxml"));
+                break;
+            case "骑手":
+                anchorPane = FXMLLoader.load(this.getClass().getResource("rider/RiderMainWindow.fxml"));
+                break;
+        }
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setTitle(role);
+        stage.show();
+        Stage thisStage = (Stage) registerBtn.getScene().getWindow();
+        thisStage.close();
     }
     //获取验证码
     @FXML
