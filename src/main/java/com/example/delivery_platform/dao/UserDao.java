@@ -1,7 +1,7 @@
 package com.example.delivery_platform.dao;
 
 import com.example.delivery_platform.databaseutil.Database;
-import com.example.delivery_platform.vo.userBean;
+import com.example.delivery_platform.vo.UserBean;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -51,7 +51,7 @@ public class UserDao {
         PreparedStatement  psmt=db.getConnection().prepareStatement(Sql);
         //查询结果集,用于获取查询结果中的每一行数据
         ResultSet rs= psmt.executeQuery();
-        userBean role=new userBean();
+        UserBean role=new UserBean();
         if(rs.next()){//判断查询结果中是否有数据
 //            userbean.setUserName(rs.getString("user_name"));
             role.setUserAccount(rs.getString("user_account"));
@@ -69,7 +69,7 @@ public class UserDao {
         PreparedStatement  psmt=db.getConnection().prepareStatement(Sql);
         //查询结果集,用于获取查询结果中的每一行数据
         ResultSet rs= psmt.executeQuery();
-        userBean role=new userBean();
+        UserBean role=new UserBean();
         if(rs.next()){//判断查询结果中是否有数据
 //            userbean.setUserName(rs.getString("user_name"));
             role.setUserAccount(rs.getString("user_password"));
@@ -87,7 +87,7 @@ public class UserDao {
         PreparedStatement  psmt=db.getConnection().prepareStatement(Sql);
         //查询结果集,用于获取查询结果中的每一行数据
         ResultSet rs= psmt.executeQuery();
-        userBean role=new userBean();
+        UserBean role=new UserBean();
         if(rs.next()){//判断查询结果中是否有数据
 //            userbean.setUserName(rs.getString("user_name"));
             role.setUserRole(rs.getString("user_role"));

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.delivery_platform.view.business.ChangeShopNameController">
+    <children>
+        <Button fx:id="commitBtn" layoutX="200.0" layoutY="299.0" mnemonicParsing="false" onAction="#onCommitBtnClicked" text="确定" />
+        <Button fx:id="cancelBrn" layoutX="388.0" layoutY="299.0" mnemonicParsing="false" onAction="#onCancelBrnClicked" text="取消" />
+        <Label layoutX="56.0" layoutY="188.0" prefHeight="23.0" prefWidth="105.0" text="输入新的店铺名称" />
+        <TextField fx:id="shopNameTextField" layoutX="239.0" layoutY="182.0" prefHeight="36.0" prefWidth="270.0" />
+    </children>
+</AnchorPane>

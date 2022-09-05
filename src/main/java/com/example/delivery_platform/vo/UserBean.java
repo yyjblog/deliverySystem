@@ -1,13 +1,13 @@
 package com.example.delivery_platform.vo;
 
-public class userBean {
+public class UserBean {
     private String UserAccount;
     private String UserPassword;
     private String UserName;
     private String UserRole;
     private String UserFaceImage;
 
-    public userBean(String userAccount, String userPassword, String userName, String userRole, String userFaceImage) {
+    public UserBean(String userAccount, String userPassword, String userName, String userRole, String userFaceImage) {
         UserAccount = userAccount;
         UserPassword = userPassword;
         UserName = userName;
@@ -15,7 +15,7 @@ public class userBean {
         UserFaceImage = userFaceImage;
     }
 
-    public userBean() {
+    public UserBean() {
     }
 
     public String getUserAccount() {

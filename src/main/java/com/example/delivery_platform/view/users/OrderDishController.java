@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,6 +22,8 @@ public class OrderDishController implements Initializable {
     private TableView<?> dishTableView;
     @FXML
     void onReturnBtnClicked(ActionEvent event) {
+        Stage thisStage= (Stage) returnBtn.getScene().getWindow();
+        thisStage.close();
 
     }
 
@@ -31,15 +34,6 @@ public class OrderDishController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        dishTableView.setRowFactory(tv -> {
-//            TableRow<?> row = new TableRow<>();
-//            row.setOnMouseClicked(event -> {
-//                if (event.getClickCount() == 2 && (!row.isEmpty())) {
-//                    Dish emailInfo = row.getItem();
-//                    System.out.println(emailInfo);
-//                }
-//            });
-//            return row;
-//        });
+
     }
 }

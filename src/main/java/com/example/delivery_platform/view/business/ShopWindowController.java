@@ -26,7 +26,35 @@ public class ShopWindowController {
     private Button changeShopNameBtn;
 
     @FXML
+    private Button changeImageBtn;
+
+    @FXML
     private Button viewDishesBtn;
+
+    @FXML
+    void onChangeShopPlaceBtnClicked(ActionEvent event) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("ChangeShopAddress.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setTitle("管理菜品");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void onChangeShopNameBtn(ActionEvent event) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("ChangeShopName.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setTitle("管理菜品");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void onChangeImageBtnClicked(ActionEvent event) {
+
+    }
 
     @FXML
     void onManageDishBtnClicked(ActionEvent event) throws IOException {

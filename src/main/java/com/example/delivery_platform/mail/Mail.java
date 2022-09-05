@@ -27,7 +27,7 @@ public class Mail {
         // 此处填写，写信人的账号(自行修改)
         props.put("mail.user", "934902584@qq.com");
         // 此处填写16位STMP口令(自行修改)
-        props.put("mail.password", "byhzwvnydhfmbfah");
+        props.put("mail.password", "ykwpmojdiusdbcaf");
 
         // 构建授权信息，用于进行SMTP进行身份验证
         Authenticator authenticator = new Authenticator() {

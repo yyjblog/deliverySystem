@@ -9,10 +9,10 @@
         <Label layoutX="8.0" layoutY="157.0" prefHeight="102.0" prefWidth="95.0" text="用户点餐" />
         <TableView fx:id="shopTableView" layoutX="86.0" layoutY="30.0" prefHeight="355.0" prefWidth="459.0">
             <columns>
-                <TableColumn prefWidth="83.0" text="店铺名" />
-                <TableColumn prefWidth="127.0" text="位置" />
-                <TableColumn prefWidth="159.0" text="店铺图片" />
-            <TableColumn prefWidth="89.0" text="评分" />
+                <TableColumn fx:id="shopName" prefWidth="83.0" text="店铺名" />
+                <TableColumn fx:id="shopAddress" prefWidth="127.0" text="位置" />
+                <TableColumn fx:id="shopImage" prefWidth="159.0" text="店铺图片" />
+                <TableColumn fx:id="shopRatings" prefWidth="89.0" text="评分" />
             </columns>
         </TableView>
       <Separator layoutX="85.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="4.0" />

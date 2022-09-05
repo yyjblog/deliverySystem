@@ -14,7 +14,6 @@ import java.io.IOException;
 
 public class RiderPersonalWindowController {
 
-
     @FXML
     private Button changeHeadImageBtn;
 
@@ -36,9 +35,26 @@ public class RiderPersonalWindowController {
     @FXML
     private Label nameLabel;
 
+
     @FXML
-    void onchangePasswdBtnClicked(ActionEvent event) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("RiderChangePasswd.fxml"));
+    void onChangeNameBtnClicked(ActionEvent event) throws IOException {
+
+        AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("ChangeName.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setTitle("修改名字");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void onChangeHeadImageBtnClicked(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onChangePasswdBtnClicked(ActionEvent event) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(this.getClass().getResource("ChangePasswd.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = new Stage();
         stage.setTitle("修改密码");
