@@ -23,7 +23,11 @@ public class ServerThread extends Thread{
                 System.out.println(accept);
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            try {
+                socket.close();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
 }
