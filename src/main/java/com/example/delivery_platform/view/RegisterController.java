@@ -1,5 +1,6 @@
 package com.example.delivery_platform.view;
 
+import com.example.delivery_platform.dao.ShopDao;
 import com.example.delivery_platform.dao.UserDao;
 import com.example.delivery_platform.mail.Mail;
 import javafx.animation.KeyFrame;
@@ -156,6 +157,9 @@ public class RegisterController implements Initializable {
                                         break;
                                     case "商家":
                                         anchorPane = FXMLLoader.load(this.getClass().getResource("business/BusinessMainWindow.fxml"));
+                                        //用户注册成功后判断信息
+                                        ShopDao shopDao=new ShopDao();
+                                        shopDao.insertShop("","","","",UserAccount);
                                         break;
                                     case "骑手":
                                         anchorPane = FXMLLoader.load(this.getClass().getResource("rider/RiderMainWindow.fxml"));

@@ -32,5 +32,7 @@
         </GridPane>
         <Button fx:id="commitBtn" layoutX="167.0" layoutY="299.0" mnemonicParsing="false" onAction="#onCommitBtnClicked" text="确定" />
         <Button fx:id="cancelBrn" layoutX="350.0" layoutY="299.0" mnemonicParsing="false" onAction="#onCancelBrnClicked" text="取消" />
+        <Label fx:id="checkPasswdLabel" layoutX="193.0" layoutY="245.0" prefHeight="30.0" prefWidth="216.0" textFill="RED" />
     </children>
+
 </AnchorPane>

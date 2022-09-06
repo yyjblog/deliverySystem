@@ -1,6 +1,7 @@
 package com.example.delivery_platform.view.users;
 
 import com.example.delivery_platform.TPC.Client;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class UserMainWindowController extends Client{
 
@@ -33,7 +36,23 @@ public class UserMainWindowController extends Client{
 
     //创建客户端
     public void initialize(){
+
         super.connect("user");
+        Timer timer = new Timer();//先new一个定时器
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        System.out.println(111);//添加要刷新的东西
+                        int result = 0;
+                    }
+                });
+
+            }
+        },100,1000);//定时器的延迟时间及间隔时间，不要设置太小
+
     }
 
     //设置中心区域
