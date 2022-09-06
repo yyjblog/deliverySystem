@@ -15,7 +15,19 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class RiderMainWindowController extends Client implements Initializable {
+public class RiderMainWindowController implements Initializable {
+
+    protected static Client ownClient;
+
+    static {
+        try {
+            ownClient = new Client();
+            ownClient.connect("rider");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @FXML
     private AnchorPane anchorPane;
 
@@ -33,7 +45,7 @@ public class RiderMainWindowController extends Client implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        super.connect("rider");
+
     }
 
     //设置中心区域

@@ -4,17 +4,27 @@ import com.example.delivery_platform.TPC.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ResourceBundle;
 
-public class UserMainWindowController extends Client{
+import static com.example.delivery_platform.TPC.Client.send;
+
+public class UserMainWindowController {
+
+    protected static Client ownClient;
+
+    static {
+        try {
+            ownClient = new Client();
+            ownClient.connect("user");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @FXML
     private Button headImageBtn;
@@ -32,8 +42,8 @@ public class UserMainWindowController extends Client{
     private Button orderBtn;
 
     //创建客户端
-    public void initialize(){
-        super.connect("user");
+    public static void initialize(){
+
     }
 
     //设置中心区域

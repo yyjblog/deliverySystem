@@ -8,46 +8,41 @@ import java.net.UnknownHostException;
 import java.util.List;
 
 public class Client {
-    private DataOutputStream out = null;
-
-    private DataInputStream in = null;
 
     private String host = "localhost";
 
     private int port = 3066;
 
-    private Socket socket = null;
+    private Socket socket = new Socket(host, port);
 
-    public Client() {
+    public Client() throws IOException {
 
     }
 
     //通过构造方法指定其他的连接端口与主机
-    public Client(String host, int port) {
+    public Client(String host, int port) throws IOException {
         this.host = host;
         this.port = port;
     }
 
     public void connect(String identity){
-        try{
-            socket = new Socket(host, port);
-            //告诉服务端自己是什么身份
-            send(identity);
-        } catch (UnknownHostException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        //告诉服务端自己是什么身份
+        send(identity,socket);
 
     }
 
     //向服务端发送信息
-    public void send(String message){
+    public static void send(String message,Socket user){
         try{
-            out = new DataOutputStream(socket.getOutputStream());
+            DataOutputStream out;
+            out = new DataOutputStream(user.getOutputStream());
             out.writeUTF(message);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Socket getSocket(){
+        return socket;
     }
 }

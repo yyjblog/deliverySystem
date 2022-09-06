@@ -14,7 +14,18 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BusinessMainWindowController extends Client implements Initializable {
+public class BusinessMainWindowController implements Initializable {
+
+    protected static Client ownClient;
+
+    static {
+        try {
+            ownClient = new Client();
+            ownClient.connect("business");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @FXML
     private BorderPane mainPage;
@@ -24,7 +35,7 @@ public class BusinessMainWindowController extends Client implements Initializabl
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        super.connect("business");
+
     }
 
     //设置中心区域
