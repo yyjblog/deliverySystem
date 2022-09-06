@@ -24,6 +24,7 @@ public class ServerThread extends Thread{
             while(true){
                 DataInputStream in = new DataInputStream(socket.getInputStream());
                 String accept = in.readUTF();
+
                 System.out.println(accept);
                 if (accept == "TransOrder") {
                     chat_create(socket);
@@ -59,6 +60,7 @@ public class ServerThread extends Thread{
                     }
                 }
                 socket.close();
+//                Iterable<String> it = 
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }

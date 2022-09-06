@@ -31,6 +31,7 @@ public class Server {
                 System.out.println("收到新请求");
                 classify(new DataInputStream(socket.getInputStream()));
                 new ServerThread(socket).start();//为连接的客户单独创建一个线程对数据处理
+                System.out.println(user_list);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
